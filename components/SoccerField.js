@@ -1,5 +1,5 @@
 import * as React from "react"
-import { formations } from "@/components/Positions"
+import { formations } from "@/components/Formations"
 import { capitalizeWords } from "@/lib/utils"
 import { WIDTH_FIELD, HEIGHT_FIELD } from "@/utils/constants"
 
@@ -479,27 +479,33 @@ export const SoccerField = ({ guessedPlayers, teams }) => {
               transform={`rotate(90, ${position.x}, ${position.y})`}
               className='md:rotate-0'
             >
-              <circle
-                cx={position.x}
-                cy={position.y}
-                r='65'
-                fill={
-                  player.team === "home" ? teams.home.color : teams.away.color
-                }
-                stroke='white'
-                strokeWidth='2'
-              />
-              <text
-                x={position.x}
-                y={position.y}
-                textAnchor='middle'
-                dominantBaseline='middle'
-                fill='white'
-                fontSize='45'
-                className='absolute font-bold transition-transform duration-300'
-              >
-                {position.position}
-              </text>
+              {player.position.match(/^(?!sub)/i) && (
+                <>
+                  <circle
+                    cx={position.x}
+                    cy={position.y}
+                    r='65'
+                    fill={
+                      player.team === "home"
+                        ? teams.home.color
+                        : teams.away.color
+                    }
+                    stroke='white'
+                    strokeWidth='2'
+                  />
+                  <text
+                    x={position.x}
+                    y={position.y}
+                    textAnchor='middle'
+                    dominantBaseline='middle'
+                    fill='white'
+                    fontSize='45'
+                    className='absolute font-bold transition-transform duration-300'
+                  >
+                    {position.position}
+                  </text>
+                </>
+              )}
               <text
                 x={position.x}
                 y={

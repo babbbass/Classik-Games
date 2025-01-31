@@ -21,7 +21,7 @@ export const PlayerInput = ({ onSubmit, placeholder }: PlayerInputProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='flex gap-2 w-full max-w-md mx-auto'
+      className='flex gap-2 w-full max-w-md mx-auto my-10'
     >
       <Input
         type='text'
@@ -30,7 +30,10 @@ export const PlayerInput = ({ onSubmit, placeholder }: PlayerInputProps) => {
         placeholder={placeholder}
         className='flex-1 text-xs sm:text-base'
       />
-      <Button type='submit' className='bg-gold hover:bg-primary text-white'>
+      <Button
+        type='submit'
+        className='bg-gold hover:bg-grass text-slate-900 hover:text-slate-50 font-sans'
+      >
         Valider
       </Button>
     </form>

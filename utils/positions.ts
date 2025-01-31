@@ -19,16 +19,28 @@ export const POSITION = {
   //middlefield
   MDG: {
     home: {},
-    away: { x: 1800, y: 1000, position: "MDG" },
+    away: { x: 1880, y: 1000, position: "MDG" },
   },
   MDD: {
     home: {},
-    away: { x: 1800, y: 600, position: "MDD" },
+    away: { x: 1880, y: 600, position: "MDD" },
   },
 
   MCD: {
     home: { x: 900, y: 1040, position: "MCD" },
     away: { x: 1660, y: 560, position: "MCD" },
+  },
+  MOG: {
+    home: {},
+    away: { x: 1600, y: 1250, position: "MOG" },
+  },
+  MOC: {
+    home: {},
+    away: { x: 1580, y: 800, position: "MOC" },
+  },
+  MOD: {
+    home: {},
+    away: { x: 1600, y: 350, position: "MOD" },
   },
   MLG: {
     home: {},
@@ -56,11 +68,11 @@ export const POSITION = {
   },
   DCG: {
     home: { x: 400, y: 600, position: "DCG" },
-    away: { x: 2150, y: 600, position: "DCG" },
+    away: { x: 2150, y: 1000, position: "DCD" },
   },
   DCD: {
     home: { x: 400, y: 1000, position: "DCD" },
-    away: { x: 2150, y: 1000, position: "DCD" },
+    away: { x: 2150, y: 600, position: "DCG" },
   },
   DD: {
     home: { x: 600, y: 1350, position: "DD" },
@@ -69,5 +81,22 @@ export const POSITION = {
   G: {
     home: { x: 105, y: 800, position: "G" },
     away: { x: 2460, y: 800, position: "G" },
+  },
+  Substitute: {
+    away: {
+      SUB0: { x: 2410, y: 1450, position: "SUB0" },
+      SUB1: { x: 2410, y: 1390, position: "SUB1" },
+      SUB2: { x: 2410, y: 1330, position: "SUB2" },
+      SUB3: { x: 2410, y: 1270, position: "SUB3" },
+      SUB4: { x: 2410, y: 1210, position: "SUB4" },
+      SUB5: { x: 2410, y: 1150, position: "SUB5" },
+      SUB6: { x: 2410, y: 1090, position: "SUB6" },
+    },
+    home: {
+      SUB0: { x: 160, y: 1450, position: "SUB" },
+      SUB1: { x: 160, y: 1390, position: "SUB" },
+      SUB2: { x: 160, y: 1330, position: "SUB" },
+      SUB3: { x: 160, y: 1270, position: "SUB" },
+    },
   },
 }

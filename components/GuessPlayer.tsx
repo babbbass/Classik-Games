@@ -58,6 +58,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
       toast({
         title: "Correct !",
         description: "Bien joué ! Continuez comme ça !",
+        className: "bg-grass text-slate-50",
       })
     } else {
       toast({
