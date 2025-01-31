@@ -21,7 +21,7 @@ export const PlayerInput = ({ onSubmit, placeholder }: PlayerInputProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='flex gap-2 w-full max-w-md mx-auto my-10'
+      className='flex gap-2 w-full max-w-md mx-auto mt-10 mb-5'
     >
       <Input
         type='text'

@@ -19,10 +19,8 @@ type GuessPlayerProps = {
   }
 }
 export function GuessPlayer({ players, teams }: GuessPlayerProps) {
-  // const [guess, setGuess] = useState("")
   const [guessedPlayers, setGuessedPlayers] = useState<Player[]>([])
   const [score, setScore] = useState(0)
-  // console.log("guessedPlayers", guessedPlayers, "players", players)
   const playersConcat = players.home.concat(players.away)
   const handleGuess = (playerName: string) => {
     const normalizedGuess = playerName.toLowerCase()
@@ -77,6 +75,29 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         placeholder="Entrez le nom d'un joueur..."
       />
 
+      <div className='flex gap-2 w-full max-w-md mx-auto justify-around mb-5'>
+        <button
+          className='bg-slate-900 text-slate-50 hover:bg-grass hover:text-slate-50 font-sans p-2 rounded-lg  text-sm'
+          onClick={() => {
+            const homePlayers = players.home.map((player) => ({
+              ...player,
+              team: "home",
+            }))
+            setGuessedPlayers([...homePlayers, ...players.away])
+          }}
+        >
+          Voir tous les joueurs de la partie
+        </button>
+        <button
+          className='bg-grass text-slate-50 hover:bg-grass hover:text-slate-50 font-sans p-2 rounded-lg text-sm'
+          onClick={() => {
+            setGuessedPlayers([])
+            setScore(0)
+          }}
+        >
+          Réinitialiser
+        </button>
+      </div>
       <ScoreDisplay score={score} total={playersConcat.length} />
       <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
     </div>

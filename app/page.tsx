@@ -9,7 +9,7 @@ export default function Home() {
         {MATCHES.map((match) => (
           <li key={match.id} className='mb-2'>
             <Link href={`/match/${match.id}`}>
-              <p className='text-grass italic hover:underline hover:text-slate-900 transition-all duration-200 ease-in-out hover:scale-105'>
+              <p className='text-grass hover:underline hover:text-slate-900 transition-all duration-200 ease-in-out hover:scale-105'>
                 {match.homeTeam.name} vs {match.awayTeam.name} -{" "}
                 {match.competition}
               </p>
