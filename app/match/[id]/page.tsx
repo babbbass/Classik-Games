@@ -4,9 +4,11 @@ import { MATCHES } from "@/utils/matches"
 export default async function MatchPage({
   params,
 }: {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }) {
-  const { id } = params
+  const { id } = await params
+
+  if (!id) return <p>Match introuvable</p>
   const match = MATCHES.find((match) => match.id === parseInt(id))
 
   if (!match) return <p>Match introuvable</p>
