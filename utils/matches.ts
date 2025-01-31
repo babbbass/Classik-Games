@@ -55,7 +55,7 @@ export const MATCHES = [
       ],
     },
     description:
-      "Le PSG était 26e au classement, virtuellement éliminé à deux journées de la fin. Manchester City occupait la 24e place, dernière qualificative, avec un point d'avance sur le PSG2.Les deux équipes avaient besoin d'une victoire pour maintenir leurs espoirs européens.",
+      "Le PSG était 26e au classement, virtuellement éliminé à deux journées de la fin. Manchester City occupait la 24e place, dernière qualificative, avec un point d'avance sur le PSG. Les deux équipes avaient besoin d'une victoire pour maintenir leurs espoirs européens.",
   },
   {
     id: 3,

@@ -75,9 +75,10 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         placeholder="Entrez le nom d'un joueur..."
       />
 
-      <div className='flex gap-2 w-full max-w-md mx-auto justify-around mb-5'>
+      <ScoreDisplay score={score} total={playersConcat.length} />
+      <div className='flex gap-2 w-full max-w-md mx-auto justify-around mb-5 mt-10'>
         <button
-          className='bg-slate-900 text-slate-50 hover:bg-grass hover:text-slate-50 font-sans p-2 rounded-lg  text-sm'
+          className='bg-slate-900 text-slate-50 hover:scale-110 font-sans p-2 rounded-lg text-sm transition-all duration-200 ease-in-out'
           onClick={() => {
             const homePlayers = players.home.map((player) => ({
               ...player,
@@ -89,7 +90,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
           Voir tous les joueurs de la partie
         </button>
         <button
-          className='bg-grass text-slate-50 hover:bg-grass hover:text-slate-50 font-sans p-2 rounded-lg text-sm'
+          className='bg-grass text-slate-50 hover:scale-110 font-sans p-2 rounded-lg text-sm transition-all duration-200 ease-in-out'
           onClick={() => {
             setGuessedPlayers([])
             setScore(0)
@@ -98,7 +99,6 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
           Réinitialiser
         </button>
       </div>
-      <ScoreDisplay score={score} total={playersConcat.length} />
       <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
     </div>
   )

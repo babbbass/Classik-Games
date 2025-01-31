@@ -32,7 +32,7 @@ export const PlayerInput = ({ onSubmit, placeholder }: PlayerInputProps) => {
       />
       <Button
         type='submit'
-        className='bg-gold hover:bg-grass text-slate-900 hover:text-slate-50 font-sans'
+        className='bg-gradient-to-b from-yellow-200 to-yellow-500 hover:bg-grass text-slate-900 hover:text-slate-50 font-sans'
       >
         Valider
       </Button>

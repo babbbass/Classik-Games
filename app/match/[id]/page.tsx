@@ -1,6 +1,7 @@
 // import { prisma } from '@/lib/prisma';
 import { GuessPlayer } from "@/components/GuessPlayer"
 import { MATCHES } from "@/utils/matches"
+import { Card } from "@/components/ui/card"
 export default async function MatchPage({
   params,
 }: {
@@ -16,7 +17,7 @@ export default async function MatchPage({
   return (
     <div className='p-2 w-full md:w-3/4 mx-auto bg-slate-50 flex-1'>
       <header className='mb-4 flex justify-center flex-col items-center gap-1 '>
-        <section className='border border-gray-300 w-full md:w-2/3 p-2 text-center'>
+        <Card className='border border-gray-300 w-full md:w-2/3 p-2 text-center'>
           <p className='text-black mb-3 capitalize text-sm md:text-base'>
             {match.competition} - {match.date}
           </p>
@@ -24,14 +25,14 @@ export default async function MatchPage({
             <span className='w-1/3 text-sm md:text-xl  text-center'>
               {match.homeTeam.name}
             </span>{" "}
-            <span className='text-grass text-base md:text-2xl w-1/4  text-center'>
+            <span className='text-grass text-base md:text-2xl w-1/4 text-center'>
               {match.score}
             </span>{" "}
             <span className='w-1/3 text-base md:text-xl text-center '>
               {match.awayTeam.name}
             </span>
           </h1>
-        </section>
+        </Card>
         <p className='w-full md:w-2/3 flex justify-start font-semibold italic text-sm md:text-base mt-6'>
           {match.description}
         </p>
