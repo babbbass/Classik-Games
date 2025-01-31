@@ -1,24 +1,34 @@
 "use client"
 import { useState } from "react"
 import { toast } from "@/hooks/use-toast"
-import { ScoreDisplay } from "@/components/ScoreDisplay"
+// import { ScoreDisplay } from "@/components/ScoreDisplay"
 import { PlayerInput } from "@/components/PlayerInput"
+import { SoccerField } from "@/components/SoccerField"
 
-type GuessPlayerProps = {
-  players: { player: { name: string } }[]
+type Player = {
+  name: string
+  position: string
 }
-export function GuessPlayer({ players }: GuessPlayerProps) {
-  // const [guess, setGuess] = useState("")
-  const [guessedPlayers, setGuessedPlayers] = useState<string[]>([])
-  // const guessedPlayers: string[] = []
-  const [score, setScore] = useState(0)
-  console.log("guessedPlayers", guessedPlayers)
 
+type Team = { name: string; formation: string; color: string }
+type GuessPlayerProps = {
+  players: { home: Player[]; away: Player[] }
+  teams: {
+    home: Team
+    away: Team
+  }
+}
+export function GuessPlayer({ players, teams }: GuessPlayerProps) {
+  // const [guess, setGuess] = useState("")
+  const [guessedPlayers, setGuessedPlayers] = useState<Player[]>([])
+  // const [score, setScore] = useState(0)
+  // console.log("guessedPlayers", guessedPlayers, "players", players)
+  const playersConcat = players.home.concat(players.away)
   const handleGuess = (playerName: string) => {
     const normalizedGuess = playerName.toLowerCase()
 
     const alreadyGuessed = guessedPlayers.some(
-      (player) => player.toLowerCase() === normalizedGuess
+      (player) => player.name.toLowerCase() === normalizedGuess
     )
     if (alreadyGuessed) {
       toast({
@@ -29,14 +39,22 @@ export function GuessPlayer({ players }: GuessPlayerProps) {
       return
     }
 
-    const playerExists = players.some(
-      (p) => p.player.name.toLowerCase() === normalizedGuess
-    )
+    const player = playersConcat.find((player) => {
+      const playerName = player.name.toLowerCase()
+      const [firstName, lastName] = playerName.split(" ")
+      return (
+        firstName === normalizedGuess ||
+        lastName === normalizedGuess ||
+        playerName === normalizedGuess
+      )
+    })
 
-    if (playerExists) {
-      console.log("playerExists", playerExists, playerName)
-      setScore((prev) => prev + 1)
-      setGuessedPlayers((prev) => [...prev, playerName])
+    if (player) {
+      const isPlayerHome = players.home.find((p) => p.name === player.name)
+      const playerHomeOrAway = isPlayerHome
+        ? { ...player, team: "home" }
+        : { ...player, team: "away" }
+      setGuessedPlayers((prev) => [...prev, playerHomeOrAway])
       toast({
         title: "Correct !",
         description: "Bien joué ! Continuez comme ça !",
@@ -58,12 +76,13 @@ export function GuessPlayer({ players }: GuessPlayerProps) {
       />
 
       {/* <ScoreDisplay score={score} total={players.length} /> */}
-      <div className='mt-4'>
+      {/* <div className='mt-4'>
         <h2 className='text-lg font-semibold'>Joueurs trouvés :</h2>
         {guessedPlayers.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
-      </div>
+      </div> */}
+      <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
     </div>
   )
 }
