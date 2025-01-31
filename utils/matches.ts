@@ -1,11 +1,17 @@
 export const MATCHES = [
   {
     id: 1,
-    homeTeam: { name: "PSG", formation: "4-3-3", color: "#21304D" },
+    homeTeam: {
+      name: "PSG",
+      formation: "4-3-3",
+      color: "#21304D",
+      flag: "psg.png",
+    },
     awayTeam: {
       name: "Manchester City",
       formation: "4-2-3-1",
       color: "#43A1D5",
+      flag: "city.png",
     },
     competition: "Ligue des champions",
     season: "2024-25",

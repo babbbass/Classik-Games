@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { toast } from "@/hooks/use-toast"
-// import { ScoreDisplay } from "@/components/ScoreDisplay"
+import { ScoreDisplay } from "@/components/ScoreDisplay"
 import { PlayerInput } from "@/components/PlayerInput"
 import { SoccerField } from "@/components/SoccerField"
 
@@ -21,7 +21,7 @@ type GuessPlayerProps = {
 export function GuessPlayer({ players, teams }: GuessPlayerProps) {
   // const [guess, setGuess] = useState("")
   const [guessedPlayers, setGuessedPlayers] = useState<Player[]>([])
-  // const [score, setScore] = useState(0)
+  const [score, setScore] = useState(0)
   // console.log("guessedPlayers", guessedPlayers, "players", players)
   const playersConcat = players.home.concat(players.away)
   const handleGuess = (playerName: string) => {
@@ -55,6 +55,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         ? { ...player, team: "home" }
         : { ...player, team: "away" }
       setGuessedPlayers((prev) => [...prev, playerHomeOrAway])
+      setScore((prev) => prev + 1)
       toast({
         title: "Correct !",
         description: "Bien joué ! Continuez comme ça !",
@@ -76,13 +77,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         placeholder="Entrez le nom d'un joueur..."
       />
 
-      {/* <ScoreDisplay score={score} total={players.length} /> */}
-      {/* <div className='mt-4'>
-        <h2 className='text-lg font-semibold'>Joueurs trouvés :</h2>
-        {guessedPlayers.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
-      </div> */}
+      <ScoreDisplay score={score} total={playersConcat.length} />
       <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
     </div>
   )
