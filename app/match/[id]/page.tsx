@@ -2,6 +2,7 @@
 import { GuessPlayer } from "@/components/GuessPlayer"
 import { MATCHES } from "@/utils/matches"
 import { Card } from "@/components/ui/card"
+import NavButton from "@/components/NavButton"
 export default async function MatchPage({
   params,
 }: {
@@ -41,6 +42,7 @@ export default async function MatchPage({
         players={match.players}
         teams={{ home: match.homeTeam, away: match.awayTeam }}
       />
+      <NavButton text='Nouveau match' href='/' />
     </div>
   )
 }
