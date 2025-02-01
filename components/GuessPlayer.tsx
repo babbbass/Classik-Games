@@ -4,7 +4,7 @@ import { toast } from "@/hooks/use-toast"
 import { ScoreDisplay } from "@/components/ScoreDisplay"
 import { PlayerInput } from "@/components/PlayerInput"
 import { SoccerField } from "@/components/SoccerField"
-
+import { NavButton } from "@/components/NavButton"
 type Player = {
   name: string
   position: string
@@ -78,7 +78,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
       <ScoreDisplay score={score} total={playersConcat.length} />
       <div className='flex gap-2 w-full max-w-md mx-auto justify-around mb-5 mt-10'>
         <button
-          className='bg-blue-500 text-slate-50 hover:scale-110 font-sans p-2 rounded-lg text-sm transition-all duration-200 ease-in-out'
+          className='bg-slate-900 text-slate-50 hover:scale-110 font-sans p-2 rounded-lg text-sm transition-all duration-200 ease-in-out'
           onClick={() => {
             const homePlayers = players.home.map((player) => ({
               ...player,
@@ -99,6 +99,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
           Réinitialiser
         </button>
       </div>
+      <NavButton text='Autre match' href='/' />
       <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
     </div>
   )
