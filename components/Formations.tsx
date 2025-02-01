@@ -87,6 +87,25 @@ export const away_4_2_3_1_Formation: TeamFormation = {
   SUB4: POSITION.Substitute.away.SUB4,
 }
 
+export const home_4_2_3_1_Formation: TeamFormation = {
+  AT: POSITION.AT.home,
+  MOC: POSITION.MOC.home,
+  MOG: POSITION.MOG.home,
+  MOD: POSITION.MOD.home,
+  MDD: POSITION.MDD.home,
+  MDG: POSITION.MDG.home,
+  DG: POSITION.DG.home,
+  DCG: POSITION.DCG.home,
+  DCD: POSITION.DCD.home,
+  DD: POSITION.DD.home,
+  G: POSITION.G.home,
+  SUB0: POSITION.Substitute.home.SUB0,
+  SUB1: POSITION.Substitute.home.SUB1,
+  SUB2: POSITION.Substitute.home.SUB2,
+  SUB3: POSITION.Substitute.home.SUB3,
+  SUB4: POSITION.Substitute.home.SUB4,
+}
+
 const home_4_1_2_3_Formation: TeamFormation = {
   AT: POSITION.AT.home,
   ALD: POSITION.ALD.home,
@@ -130,7 +149,7 @@ const away_4_1_2_3_Formation: TeamFormation = {
 export const formations = {
   home: {
     "4-3-3": home_4_3_3_Formation,
-    "4-2-3-1": away_4_2_3_1_Formation,
+    "4-2-3-1": home_4_2_3_1_Formation,
     "4-4-2": home_4_4_2_Formation,
     "4-1-2-3": home_4_1_2_3_Formation,
   },

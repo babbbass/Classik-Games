@@ -18,11 +18,11 @@ export const POSITION = {
   },
   //middlefield
   MDG: {
-    home: {},
+    home: { x: 700, y: 600, position: "MDG" },
     away: { x: 1880, y: 1000, position: "MDG" },
   },
   MDD: {
-    home: {},
+    home: { x: 700, y: 1000, position: "MDD" },
     away: { x: 1880, y: 600, position: "MDD" },
   },
 
@@ -31,15 +31,15 @@ export const POSITION = {
     away: { x: 1660, y: 560, position: "MCD" },
   },
   MOG: {
-    home: {},
+    home: { x: 970, y: 350, position: "MOG" },
     away: { x: 1600, y: 1250, position: "MOG" },
   },
   MOC: {
-    home: {},
-    away: { x: 1580, y: 800, position: "MOC" },
+    home: { x: 970, y: 800, position: "MOC" },
+    away: { x: 1590, y: 800, position: "MOC" },
   },
   MOD: {
-    home: {},
+    home: { x: 970, y: 1250, position: "MOD" },
     away: { x: 1600, y: 350, position: "MOD" },
   },
   MLG: {
@@ -97,6 +97,9 @@ export const POSITION = {
       SUB1: { x: 160, y: 1390, position: "SUB" },
       SUB2: { x: 160, y: 1330, position: "SUB" },
       SUB3: { x: 160, y: 1270, position: "SUB" },
+      SUB4: { x: 160, y: 1210, position: "SUB4" },
+      SUB5: { x: 160, y: 1150, position: "SUB5" },
+      SUB6: { x: 160, y: 1090, position: "SUB6" },
     },
   },
 }
