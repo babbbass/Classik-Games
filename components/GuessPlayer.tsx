@@ -78,7 +78,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
       <ScoreDisplay score={score} total={playersConcat.length} />
       <div className='flex gap-2 w-full max-w-md mx-auto justify-around mb-5 mt-10'>
         <button
-          className='bg-slate-900 text-slate-50 hover:scale-110 font-sans p-2 rounded-lg text-sm transition-all duration-200 ease-in-out'
+          className='bg-slate-900 font-bold text-slate-50 px-4 hover:scale-110 font-sans p-2 rounded-lg text-sm transition-all duration-200 ease-in-out'
           onClick={() => {
             const homePlayers = players.home.map((player) => ({
               ...player,
@@ -90,7 +90,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
           Voir tous les joueurs
         </button>
         <button
-          className='bg-grass text-slate-50 hover:scale-110 font-sans p-2 rounded-lg text-sm transition-all duration-200 ease-in-out'
+          className='bg-grass text-slate-50 font-medium hover:scale-110 font-sans p-2 px-4 rounded-lg text-sm transition-all duration-200 ease-in-out'
           onClick={() => {
             setGuessedPlayers([])
             setScore(0)

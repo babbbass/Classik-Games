@@ -495,7 +495,9 @@ export const SoccerField = ({ guessedPlayers, teams }) => {
                   />
                   {player.picture ? (
                     <image
-                      href={`/${player.picture}`}
+                      href={`${
+                        process.env.NEXT_PUBLIC_PICTURES_URL
+                      }${player.picture.toLowerCase()}`}
                       x={position.x - 50}
                       y={position.y - 50}
                       width='100'
