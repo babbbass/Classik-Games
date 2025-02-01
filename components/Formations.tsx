@@ -32,12 +32,12 @@ const away_4_3_3_Formation: TeamFormation = {
   ALD: POSITION.ALD.away,
   ALG: POSITION.ALG.away,
   MCD: POSITION.MCD.away,
-  MCG: { x: 850, y: 500, position: "MCG" },
-  MC: { x: 750, y: 800, position: "MC" },
-  DG: { x: 600, y: 250, position: "DG" },
-  DCG: { x: 400, y: 600, position: "DC" },
-  DCD: { x: 400, y: 1000, position: "DC" },
-  DD: { x: 600, y: 1350, position: "DD" },
+  MCG: POSITION.MCG.away,
+  MD: POSITION.MD.away,
+  DG: POSITION.DG.away,
+  DCG: POSITION.DCG.away,
+  DCD: POSITION.DCD.away,
+  DD: POSITION.DD.away,
   G: POSITION.G.away,
 }
 
@@ -69,7 +69,6 @@ export const away_4_4_2_Formation: TeamFormation = {
 }
 
 export const away_4_2_3_1_Formation: TeamFormation = {
-  // Formation 4-2-3-1
   AT: POSITION.AT.away,
   MOC: POSITION.MOC.away,
   MOG: POSITION.MOG.away,
