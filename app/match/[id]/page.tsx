@@ -19,7 +19,11 @@ export default async function MatchPage({
       <header className='mb-4 flex justify-center flex-col items-center gap-1 '>
         <Card className='border border-gray-300 w-full md:w-2/3 p-2 text-center bg-gradient-to-t from-yellow-200 to-yellow-500'>
           <p className='text-black mb-3 capitalize text-sm md:text-base'>
-            {match.competition} - {match.date}
+            {match.competition}
+            <br />
+            <span className='text-sm'>
+              {match.date} - {match.season}
+            </span>
           </p>
           <h1 className='text-lg md:text-xl font-bold flex justify-center w-full items-center'>
             <span className='w-1/3 text-sm md:text-xl  text-center'>
