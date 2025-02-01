@@ -6,7 +6,7 @@ export function NavButton({ text, href }: { text: string; href: string }) {
   return (
     <Link href={href}>
       <div className='w-3/4 flex justify-center mx-auto'>
-        <Button className='w-full  bg-blue-500 rounded-full mt-2 hover:scale-110 hover:bg-grass'>
+        <Button className='w-full bg-blue-500 rounded-full mt-2 hover:scale-110'>
           {text}
         </Button>
       </div>
