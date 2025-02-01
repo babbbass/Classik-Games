@@ -94,7 +94,7 @@ export const MATCHES = [
         { name: "Xabi Alonso", position: "MDG", picture: "xabi Alonso.png" },
         { name: "S. Khedira", position: "MDD", picture: "Khedira.png" },
         { name: "Di Maria", position: "MLD", picture: "Di-Maria.png" },
-        { name: "Sergio Ramos", position: "DG", picture: "Ramos.png" },
+        { name: "Sergio Ramos", position: "DG", picture: "sergio-Ramos.png" },
         { name: "Ric Carvalho", position: "DCG", picture: "Carvalho.png" },
         { name: "Pepe", position: "DCD", picture: "Pepe.png" },
         { name: "Marcelo", position: "DD", picture: "Marcelo.png" },
