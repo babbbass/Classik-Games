@@ -493,17 +493,28 @@ export const SoccerField = ({ guessedPlayers, teams }) => {
                     stroke='white'
                     strokeWidth='2'
                   />
-                  <text
-                    x={position.x}
-                    y={position.y}
-                    textAnchor='middle'
-                    dominantBaseline='middle'
-                    fill='white'
-                    fontSize='45'
-                    className='absolute font-bold transition-transform duration-300'
-                  >
-                    {position.position}
-                  </text>
+                  {player.picture ? (
+                    <image
+                      href={`/${player.picture}`}
+                      x={position.x - 50}
+                      y={position.y - 50}
+                      width='100'
+                      height='100'
+                      alt={`joueur ${player.team} ${player.name}`}
+                    />
+                  ) : (
+                    <text
+                      x={position.x}
+                      y={position.y}
+                      textAnchor='middle'
+                      dominantBaseline='middle'
+                      fill='white'
+                      fontSize='45'
+                      className='absolute font-bold transition-transform duration-300'
+                    >
+                      {position.position}
+                    </text>
+                  )}
                 </>
               )}
               <text
