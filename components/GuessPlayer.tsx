@@ -4,7 +4,7 @@ import { toast } from "@/hooks/use-toast"
 import { ScoreDisplay } from "@/components/ScoreDisplay"
 import { PlayerInput } from "@/components/PlayerInput"
 import { SoccerField } from "@/components/SoccerField"
-import { NavButton } from "@/components/NavButton"
+import { OtherMatchesButton } from "@/components/OtherMatchesButton"
 type Player = {
   name: string
   position: string
@@ -90,7 +90,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
           Voir tous les joueurs
         </button>
         <button
-          className='bg-grass text-slate-50 font-medium hover:scale-110 font-sans p-2 px-4 rounded-lg text-sm transition-all duration-200 ease-in-out'
+          className='bg-gradient-to-b from-yellow-200 to-yellow-500 text-slate-900 font-medium hover:scale-110 font-sans p-2 px-4 rounded-lg text-sm transition-all duration-200 ease-in-out'
           onClick={() => {
             setGuessedPlayers([])
             setScore(0)
@@ -99,7 +99,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
           Réinitialiser
         </button>
       </div>
-      <NavButton text='Autre match' href='/' />
+      <OtherMatchesButton />
       <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
     </div>
   )

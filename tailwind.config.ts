@@ -16,7 +16,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: "#FFD700",
+        gold: "#f0b100",
         grass: "#1A6F05",
         popover: {
           DEFAULT: "hsl(var(--popover))",
