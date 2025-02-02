@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Football Classic Games",
-  description: "Find all players of historic matches",
+  title: "Football Classik Games",
+  description: "Trouve les joueurs des matchs de légendes du football",
 }
 
 export default function RootLayout({
