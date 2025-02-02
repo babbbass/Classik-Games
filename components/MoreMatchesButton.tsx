@@ -79,7 +79,7 @@ export function MoreMatchesButton() {
           <DialogHeader>
             <DialogTitle>{`D'autres matchs de légendes ?`}</DialogTitle>
             <DialogDescription className='text-slate-100'>
-              {`Entre ton email, reçois plus de matchs et redécouvre des joueurs de légendes.`}
+              {`Entrez votre email, recevez plus de matchs et redécouvrez des joueurs de légende.`}
             </DialogDescription>
           </DialogHeader>
 
