@@ -44,6 +44,7 @@ export function MoreMatchesButton() {
       toast({
         title: "Succès !",
         description: "Vous recevrez bientôt de nouveaux matchs par email.",
+        className: "bg-grass text-slate-50",
       })
 
       // Reset form
