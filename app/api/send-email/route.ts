@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const adminEmail = process.env.ADMIN_EMAIL as string
 
     await resend.emails.send({
-      from: "Matchs de Légende <onboarding@classik-games.com>",
+      from: "Matchs de Légende <onboarding@resend.dev>",
       to: email,
       subject: "Votre inscription à Classik Games",
       html: `
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
       `,
     })
     await resend.emails.send({
-      from: "Matchs de Légende <noreply@classik-games.com>",
+      from: "Matchs de Légende <noreply@resend.dev>",
       to: adminEmail,
       subject: "Nouvelle inscription à Classik Games",
       html: `
