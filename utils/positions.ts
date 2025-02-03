@@ -1,11 +1,11 @@
 export const POSITION = {
   // attaquant
   ATG: {
-    home: { x: 1185, y: 800, position: "AT" },
+    home: { x: 1185, y: 600, position: "ATG" },
     away: { x: 1375, y: 1000, position: "ATG" },
   },
   ATD: {
-    home: { x: 1185, y: 800, position: "AT" },
+    home: { x: 1185, y: 1000, position: "ATD" },
     away: { x: 1375, y: 600, position: "ATD" },
   },
   AT: {

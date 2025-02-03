@@ -299,6 +299,9 @@ export const MATCHES = [
         { name: "Stam", position: "DCD", picture: "Stam.png" },
         { name: "Cafu", position: "DD", picture: "Cafu.png" },
         { name: "Dida", position: "G", picture: "Dida.png" },
+        { name: "Tomasson", position: "SUB0", picture: "Tomasson.png" },
+        { name: "Serginho", position: "SUB1", picture: "Serginho.png" },
+        { name: "Rui Costa", position: "SUB2", picture: "Rui-Costa.png" },
       ],
 
       away: [
@@ -317,6 +320,13 @@ export const MATCHES = [
         { name: "carragher", position: "DCD", picture: "carragher.png" },
         { name: "Finnan", position: "DD", picture: "finnan.png" },
         { name: "Dudek", position: "G", picture: "Dudek.png" },
+        { name: "Smicer Vladimir", position: "SUB0", picture: "Smicer.png" },
+        { name: "Hamann", position: "SUB1", picture: "Hamann.png" },
+        {
+          name: "Cisse Djibril",
+          position: "SUB2",
+          picture: "djibril-Cisse.png",
+        },
       ],
     },
   },
