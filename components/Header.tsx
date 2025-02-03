@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { NavBar } from "@/components/NavBar"
 
 export function Header() {
   return (
@@ -24,6 +25,7 @@ export function Header() {
           </Link>
         </div>
       </header>
+      <NavBar />
     </>
   )
 }
