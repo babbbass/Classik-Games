@@ -17,6 +17,11 @@ export const POSITION = {
     away: { x: 1425, y: 350, position: "ALD" },
   },
   //middlefield
+  MCC: {
+    home: { x: 900, y: 1040, position: "MCD" },
+    away: { x: 1660, y: 560, position: "MCD" },
+  },
+
   MDG: {
     home: { x: 700, y: 600, position: "MDG" },
     away: { x: 1880, y: 1000, position: "MDG" },
