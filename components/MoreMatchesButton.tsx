@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog"
 import { ArrowRight } from "lucide-react"
 import { emailSchema } from "@/lib/validations/email"
+import Image from "next/image"
 
 export function MoreMatchesButton() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,10 +26,8 @@ export function MoreMatchesButton() {
     setIsSubmitting(true)
 
     try {
-      // Validate email
       const validatedData = emailSchema.parse({ email })
 
-      // Send email
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
@@ -67,7 +66,7 @@ export function MoreMatchesButton() {
     <>
       <div className='flex justify-end w-full md:w-1/2 mx-auto'>
         <Button
-          className='bg-green-800 rounded-full font-bold flex hover:scale-110 hover:bg-green-600 transition-all duration-200 ease-in-out text-base p-6 mr-4 mt-4'
+          className='bg-green-800 rounded-full font-bold flex hover:scale-110 transition-all duration-200 ease-in-out text-base p-6 mr-4 mt-4'
           onClick={() => setIsOpen(true)}
         >
           <span>+ de matchs</span>
@@ -75,10 +74,18 @@ export function MoreMatchesButton() {
         </Button>
       </div>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className='sm:max-w-md w-11/12 rounded-sm bg-green-800 text-slate-50'>
+        <DialogContent className='sm:max-w-md w-11/12 rounded-sm bg-green-800 text-slate-50 '>
           <DialogHeader>
-            <DialogTitle>{`D'autres matchs de légendes ?`}</DialogTitle>
-            <DialogDescription className='text-slate-100'>
+            <DialogTitle className='flex items-center text-sm md:text-base'>
+              <Image
+                src={`/classik-games.png`}
+                alt='logo'
+                width={80}
+                height={80}
+              />
+              {`Autres matchs de légendes ?`}
+            </DialogTitle>
+            <DialogDescription className='text-slate-100 text-xs md:text-base'>
               {`Entrez votre email, recevez plus de matchs et redécouvrez des joueurs de légende.`}
             </DialogDescription>
           </DialogHeader>
@@ -90,13 +97,13 @@ export function MoreMatchesButton() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className='placeholder:text-slate-50'
+              className='placeholder:text-slate-50 text-xs md:text-base'
               disabled={isSubmitting}
             />
             <DialogFooter>
               <Button
                 type='submit'
-                className='bg-yellow-500 hover:bg-yellow-400 font-bold'
+                className='bg-yellow-500 hover:bg-yellow-400 font-bold text-xs md:text-base'
                 disabled={isSubmitting}
               >
                 {isSubmitting

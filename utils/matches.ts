@@ -160,7 +160,7 @@ export const MATCHES = [
     awayTeam: { name: "Real Madrid", formation: "4-4-2", color: "#FFFFFF" },
     competition: "Liga espagnole",
     season: "2011-12",
-    short: "Le fameux Calma, Calma",
+    short: "Calma, Calma",
     description:
       "le Barça de Guardiola affrontait pour la dernière fois le Real Madrid de Mourinho dans un match qui a tenu toutes ses promesses !",
     date: "35e journée",
