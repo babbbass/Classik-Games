@@ -6,7 +6,7 @@ export function Header() {
   return (
     <>
       <header className='w-full border-b md:w-3/4 mx-auto border-grass p-2 text-slate-900 bg-slate-50'>
-        <div className='flex items-center max-w-7xl justify-between gap-2'>
+        <div className='flex items-center max-w-7xl justify-between gap-2 mx-auto'>
           <Link href='/'>
             <Image
               src={`/classik-games.png`}

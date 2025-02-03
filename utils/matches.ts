@@ -60,8 +60,18 @@ export const MATCHES = [
   },
   {
     id: 3,
-    homeTeam: { name: "FC Barcelone", formation: "4-3-3", color: "#a50044" },
-    awayTeam: { name: "Real Madrid", formation: "4-4-2", color: "#FFFFFF" },
+    homeTeam: {
+      name: "FC Barcelone",
+      formation: "4-3-3",
+      color: "#a50044",
+      flag: "fc-barcelone.png",
+    },
+    awayTeam: {
+      name: "Real Madrid",
+      formation: "4-4-2",
+      color: "#FFFFFF",
+      flag: "real-madrid.png",
+    },
     competition: "La Liga",
     season: "2010/11",
     short: "La Manita",
@@ -156,8 +166,18 @@ export const MATCHES = [
   // },
   {
     id: 4,
-    homeTeam: { name: "FC Barcelone", formation: "4-3-3", color: "#a50044" },
-    awayTeam: { name: "Real Madrid", formation: "4-4-2", color: "#FFFFFF" },
+    homeTeam: {
+      name: "FC Barcelone",
+      formation: "4-3-3",
+      color: "#a50044",
+      flag: "fc-barcelone.png",
+    },
+    awayTeam: {
+      name: "Real Madrid",
+      formation: "4-4-2",
+      color: "#FFFFFF",
+      flag: "real-madrid.png",
+    },
     competition: "Liga espagnole",
     season: "2011-12",
     short: "Calma, Calma",
