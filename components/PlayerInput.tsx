@@ -21,18 +21,18 @@ export const PlayerInput = ({ onSubmit, placeholder }: PlayerInputProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='flex gap-2 w-full max-w-md mx-auto mt-10 mb-5 z-50 sticky right-2 left-2 top-1'
+      className='flex gap-2 w-full max-w-md mx-auto mt-10 mb-5 z-50 sticky right-2 left-2 top-1 items-center'
     >
       <Input
         type='text'
         value={playerName}
         onChange={(e) => setPlayerName(e.target.value)}
         placeholder={placeholder}
-        className='flex-1 text-xs sm:text-base bg-grass text-slate-50 h-12 placeholder:text-slate-50'
+        className='flex-1 text-base bg-gradient-to-r from-green-800 to-green-900 text-slate-50 h-14 placeholder:text-slate-50 rounded-xl'
       />
       <Button
         type='submit'
-        className='bg-grass text-slate-50 hover:text-slate-50 font-sans h-12'
+        className='bg-gradient-to-l from-green-800 to-green-900 text-slate-50 hover:text-slate-50 font-sans h-14 rounded-xl'
       >
         Valider
       </Button>

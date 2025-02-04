@@ -76,11 +76,8 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
 
   return (
     <div className='mt-4'>
-      <PlayerInput
-        onSubmit={handleGuess}
-        placeholder="Entrez le nom d'un joueur..."
-      />
-
+      <PlayerInput onSubmit={handleGuess} placeholder="Nom d'un joueur..." />
+      <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
       <ScoreDisplay score={score} total={playersConcat.length} />
       <div className='flex gap-2 w-full max-w-md mx-auto justify-around mb-5 mt-10'>
         <button
@@ -110,7 +107,6 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         </button>
       </div>
       <OtherMatchesButton />
-      <SoccerField guessedPlayers={guessedPlayers} teams={teams} />
     </div>
   )
 }
