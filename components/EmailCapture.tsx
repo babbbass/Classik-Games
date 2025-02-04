@@ -78,7 +78,7 @@ export function EmailCapture({
             {`Autres matchs de légendes ?`}
           </DialogTitle>
           <DialogDescription className='text-slate-100 text-xs md:text-base'>
-            {`Entrez votre email, recevez plus de matchs et redécouvrez des joueurs de légende.`}
+            {`Entre ton email, tu aura plus de matchs et redécouvriras des joueurs de légende.`}
           </DialogDescription>
         </DialogHeader>
 
