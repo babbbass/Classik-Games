@@ -15,8 +15,8 @@ export default async function MatchPage({
   if (!match) return <p>Match introuvable</p>
 
   return (
-    <div className='p-2 w-full md:w-3/4 mx-auto bg-slate-50 flex-1'>
-      <header className='mb-4 flex justify-center flex-col items-center gap-1 '>
+    <section className='p-2 bg-slate-50 flex-1'>
+      <article className='mb-4 flex justify-center flex-col items-center gap-1 '>
         <Card className='border border-gray-300 w-full md:w-2/3 p-2 text-center bg-gradient-to-t from-yellow-200 to-yellow-500'>
           <p className='text-black mb-3 capitalize text-sm md:text-base'>
             {match.competition}
@@ -40,12 +40,12 @@ export default async function MatchPage({
             {match.description}
           </p>
         </Card>
-      </header>
+      </article>
 
       <GuessPlayer
         players={match.players}
         teams={{ home: match.homeTeam, away: match.awayTeam }}
       />
-    </div>
+    </section>
   )
 }

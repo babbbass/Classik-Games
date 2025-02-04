@@ -12,7 +12,7 @@ export const SoccerField = ({ guessedPlayers, teams }) => {
   const homeFormation = formations.home[teams.home.formation]
   const awayFormation = formations.away[teams.away.formation]
   return (
-    <div className='mt-4'>
+    <article className='mt-4'>
       <svg
         id='Layer_4'
         xmlns='http://www.w3.org/2000/svg'
@@ -149,6 +149,6 @@ export const SoccerField = ({ guessedPlayers, teams }) => {
           )
         })}
       </svg>
-    </div>
+    </article>
   )
 }

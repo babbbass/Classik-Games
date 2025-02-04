@@ -5,8 +5,8 @@ import { NavBar } from "@/components/NavBar"
 export function Header() {
   return (
     <>
-      <header className='w-full border-b md:w-3/4 mx-auto border-grass p-2 text-slate-900 bg-slate-50'>
-        <div className='flex items-center max-w-7xl justify-between gap-2 mx-auto'>
+      <header className='w-full md:w-3/4 mx-auto  p-2 text-slate-900 bg-slate-50'>
+        <div className='flex items-center max-w-7xl justify-between gap-2 mx-auto border-grass border-b'>
           <Link href='/'>
             <Image
               src={`/classik-games.png`}
@@ -24,8 +24,8 @@ export function Header() {
             </p>
           </Link>
         </div>
+        <NavBar />
       </header>
-      <NavBar />
     </>
   )
 }

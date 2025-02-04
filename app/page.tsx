@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function Home() {
   return (
     <>
-      <div className='p-4 bg-slate-50 w-full md:w-3/4 mx-auto flex-1 justify-center items-center'>
+      <div className='p-4 flex-1 justify-center items-center'>
         <ul className='my-5'>
           {MATCHES.map((match) => (
             <li key={match.id} className='my-3'>
