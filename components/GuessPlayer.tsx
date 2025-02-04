@@ -1,9 +1,10 @@
 "use client"
+import { HOME, AWAY } from "@/utils/constants"
 import { useState } from "react"
 import { toast } from "@/hooks/use-toast"
 import { ScoreDisplay } from "@/components/ScoreDisplay"
 import { PlayerInput } from "@/components/PlayerInput"
-import { SoccerField } from "@/components/SoccerField"
+import { SoccerField } from "@/components/Field/SoccerField"
 import { OtherMatchesButton } from "@/components/OtherMatchesButton"
 type Player = {
   name: string
@@ -34,6 +35,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         description: "Vous avez déjà trouvé ce joueur.",
         variant: "destructive",
         className: "sticky right-2 left-2 top-1 z-50 text-slate-50",
+        duration: 800,
       })
       return
     }
@@ -51,14 +53,15 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
     if (player) {
       const isPlayerHome = players.home.find((p) => p.name === player.name)
       const playerHomeOrAway = isPlayerHome
-        ? { ...player, team: "home" }
-        : { ...player, team: "away" }
+        ? { ...player, team: HOME }
+        : { ...player, team: AWAY }
       setGuessedPlayers((prev) => [...prev, playerHomeOrAway])
       setScore((prev) => prev + 1)
       toast({
         title: "Correct !",
         description: "Bien joué ! Continuez comme ça !",
         className: "sticky right-2 left-2 top-1 z-50 bg-blue-800 text-slate-50",
+        duration: 800,
       })
     } else {
       toast({
@@ -66,6 +69,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         description: "Ce joueur n'a pas participé à ce match.",
         variant: "destructive",
         className: "sticky right-2 left-2 top-1 z-50  text-slate-50",
+        duration: 800,
       })
     }
   }
@@ -84,9 +88,13 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
           onClick={() => {
             const homePlayers = players.home.map((player) => ({
               ...player,
-              team: "home",
+              team: HOME,
             }))
-            setGuessedPlayers([...homePlayers, ...players.away])
+            const awayPlayers = players.away.map((player) => ({
+              ...player,
+              team: AWAY,
+            }))
+            setGuessedPlayers([...homePlayers, ...awayPlayers])
           }}
         >
           Voir tous les joueurs
