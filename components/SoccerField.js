@@ -1,4 +1,3 @@
-import * as React from "react"
 import { formations } from "@/components/Formations"
 import { capitalizeWords } from "@/lib/utils"
 import { WIDTH_FIELD, HEIGHT_FIELD } from "@/utils/constants"

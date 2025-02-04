@@ -33,6 +33,7 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
         title: "Déjà deviné !",
         description: "Vous avez déjà trouvé ce joueur.",
         variant: "destructive",
+        className: "sticky right-2 left-2 top-1 z-50 text-slate-50",
       })
       return
     }
@@ -57,13 +58,14 @@ export function GuessPlayer({ players, teams }: GuessPlayerProps) {
       toast({
         title: "Correct !",
         description: "Bien joué ! Continuez comme ça !",
-        className: "bg-grass text-slate-50",
+        className: "sticky right-2 left-2 top-1 z-50 bg-blue-800 text-slate-50",
       })
     } else {
       toast({
         title: "Incorrect",
         description: "Ce joueur n'a pas participé à ce match.",
         variant: "destructive",
+        className: "sticky right-2 left-2 top-1 z-50  text-slate-50",
       })
     }
   }

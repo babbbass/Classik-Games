@@ -36,10 +36,10 @@ export default async function MatchPage({
               {match.awayTeam.name}
             </span>
           </h1>
+          <p className='w-full text-left font-medium italic text-sm  mt-6 p-2'>
+            {match.description}
+          </p>
         </Card>
-        <p className='w-full md:w-2/3 flex justify-start font-semibold italic text-sm md:text-base mt-6'>
-          {match.description}
-        </p>
       </header>
 
       <GuessPlayer
