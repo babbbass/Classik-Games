@@ -57,8 +57,7 @@ export function EmailCapture({
       toast({
         variant: "destructive",
         title: "Erreur",
-        description:
-          error instanceof Error ? error.message : "Une erreur est survenue",
+        description: "Une erreur est survenue",
       })
     } finally {
       setIsSubmitting(false)
