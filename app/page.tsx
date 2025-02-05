@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div className='p-4 flex flex-col justify-start items-center w-full flex-1 max-w-7xl mx-auto'>
-      <h1 className='text-base md:text-2xl font-bold text-center text-slate-900 mb-6'>
+      <h1 className='text-base md:text-2xl font-bold text-center text-slate-900 '>
         Trouve les joueurs des matchs de légendes
       </h1>
       <ul className='my-4 w-full'>
