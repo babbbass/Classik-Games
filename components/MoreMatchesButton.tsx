@@ -11,7 +11,7 @@ export function MoreMatchesButton() {
     <>
       <div className='flex justify-end w-full md:w-1/2 mx-auto'>
         <Button
-          className='bg-green-800 rounded-full font-sans flex hover:scale-110 transition-all duration-200 ease-in-out text-base p-6 mr-4 mt-4'
+          className='bg-grass rounded-full font-sans hover:bg-grass flex hover:scale-110 transition-all duration-200 ease-in-out text-base p-6 mr-4 mt-4'
           onClick={() => setIsOpen(true)}
         >
           <span>+ de matchs</span>

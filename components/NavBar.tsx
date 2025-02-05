@@ -29,7 +29,7 @@ export function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <nav className='w-full flex border-b justify-center gap-3 text-xs md:text-sm p-2 bg-slate-50 mx-auto'>
+      <nav className='w-full flex border-t border-b pt-4 justify-center gap-3 text-xs md:text-sm p-2 bg-slate-50 mx-auto'>
         {Links.map((link) => (
           <Link
             key={link.name}
