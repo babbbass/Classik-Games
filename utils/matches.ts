@@ -1,6 +1,6 @@
 export const MATCHES = [
   {
-    id: 1,
+    id: "psg-city",
     homeTeam: {
       name: "PSG",
       formation: "4-3-3",
@@ -59,7 +59,7 @@ export const MATCHES = [
       "Le PSG était 26e au classement, virtuellement éliminé à deux journées de la fin. Manchester City occupait la 24e place, dernière qualificative, avec un point d'avance sur le PSG. Les deux équipes avaient besoin d'une victoire pour maintenir leurs espoirs européens.",
   },
   {
-    id: 3,
+    id: "barcelona-real-madrid-manita",
     homeTeam: {
       name: "FC Barcelone",
       formation: "4-3-3",
@@ -113,7 +113,7 @@ export const MATCHES = [
     },
   },
   // {
-  //   id: 2,
+  //   id: "argentine-france",
   //   awayTeam: { name: "France", formation: "4-1-2-3", color: "#21304D" },
   //   homeTeam: { name: "Argentine", formation: "4-1-2-3", color: "#43A1D5" },
   //   competition: "Coupe du monde 2022",
@@ -165,7 +165,7 @@ export const MATCHES = [
   //   },
   // },
   {
-    id: 4,
+    id: "barcelona-real-madrid-calma",
     homeTeam: {
       name: "FC Barcelone",
       formation: "4-3-3",
@@ -266,7 +266,7 @@ export const MATCHES = [
   //   },
   // },
   {
-    id: 6,
+    id: "acmilan-liverpool-2005",
     homeTeam: {
       name: "Milan AC",
       formation: "4-1-2-1-2",
@@ -326,6 +326,67 @@ export const MATCHES = [
           name: "Cisse Djibril",
           position: "SUB2",
           picture: "djibril-Cisse.png",
+        },
+      ],
+    },
+  },
+  {
+    id: "barca-psg-2017",
+    homeTeam: {
+      name: "FC Barcelone",
+      formation: "3-3-1-3",
+      color: "#a50044",
+      flag: "fc-barcelone.png",
+    },
+    awayTeam: {
+      name: "PSG",
+      formation: "4-2-3-1",
+      color: "#21304D",
+      flag: "psg.png",
+    },
+    competition: "ligue des champions",
+    season: "2016/17",
+    short: "La remontada",
+    description:
+      "Le 8 mars 2017, le FC Barcelone réalise l'une des plus grandes remontées de l'histoire de la Ligue des Champions, battant le Paris Saint-Germain 6-1 au Camp Nou.",
+    date: "1/8 finale",
+    score: "6-1",
+    players: {
+      home: [
+        { name: "Neymar", position: "ALG", picture: "neymar.png" },
+        { name: "suarez", position: "AT", picture: "luis-suarez.png" },
+        { name: "rafinha", position: "ALD", picture: "rafinha-2017.png" },
+        { name: "Messi", position: "MOC", picture: "Messi.png" },
+        { name: "Sergio Busquets", position: "MD", picture: "Busquets.png" },
+        { name: "Andres Iniesta", position: "MDG", picture: "Iniesta.png" },
+        { name: "rakitic", position: "MDD", picture: "rakitic.png" },
+        { name: "Umtiti", position: "DCG3", picture: "umtiti.png" },
+        { name: "Pique", position: "DC3", picture: "Pique.png" },
+        { name: "Mascherano", position: "DCD3", picture: "mascherano.png" },
+        { name: "Ter Stegen", position: "G", picture: "Ter-Stegen.png" },
+        { name: "Turan A.", position: "SUB0", picture: "arda-turan.png" },
+        { name: "Roberto S.", position: "SUB1", picture: "Sergio-Roberto.png" },
+        { name: "Gomes A.", position: "SUB2", picture: "gomes-a.png" },
+      ],
+
+      away: [
+        { name: "Cavani", position: "AT", picture: "cavani.png" },
+        { name: "Lucas Moura", position: "MOD", picture: "Lucas-Moura.png" },
+        { name: "Verratti", position: "MOC", picture: "verratti.png" },
+        { name: "Draxler", position: "MOG", picture: "Draxler.png" },
+        { name: "Matuidi", position: "MDG", picture: "matuidi.png" },
+        { name: "Rabiot", position: "MDD", picture: "Rabiot.png" },
+        { name: "Kurzawa", position: "DG", picture: "Kurzawa.png" },
+        { name: "Thiago Silva", position: "DCG", picture: "Thiago-Silva.png" },
+        { name: "Marquinhos", position: "DCD", picture: "Marquinhos.png" },
+        { name: "Meunier", position: "DD", picture: "Meunier.png" },
+        { name: "Trapp", position: "G", picture: "Trapp.png" },
+        { name: "Di Maria", position: "SUB0", picture: "Di-Maria.png" },
+        { name: "S. Aurier", position: "SUB1", picture: "aurier.png" },
+        {
+          name: "Krychowiak",
+          position: "SUB2",
+          picture: "Krychowiak.png",
         },
       ],
     },

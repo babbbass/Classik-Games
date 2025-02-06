@@ -175,13 +175,13 @@ const away_4_1_2_1_2_Formation: TeamFormation = {
   DCD: POSITION.DCD.away,
   DD: POSITION.DD.away,
   G: POSITION.G.away,
-  SUB0: { x: 2410, y: 1450, position: "SUB0" },
-  SUB1: { x: 2410, y: 1390, position: "SUB1" },
-  SUB2: { x: 2410, y: 1330, position: "SUB2" },
-  SUB3: { x: 2410, y: 1270, position: "SUB3" },
-  SUB4: { x: 2410, y: 1210, position: "SUB4" },
-  SUB5: { x: 2410, y: 1150, position: "SUB5" },
-  SUB6: { x: 2410, y: 1090, position: "SUB6" },
+  SUB0: POSITION.Substitute.away.SUB0,
+  SUB1: POSITION.Substitute.away.SUB1,
+  SUB2: POSITION.Substitute.away.SUB2,
+  SUB3: POSITION.Substitute.away.SUB3,
+  SUB4: POSITION.Substitute.away.SUB4,
+  SUB5: POSITION.Substitute.away.SUB5,
+  SUB6: POSITION.Substitute.away.SUB6,
 }
 
 const home_4_1_3_2_Formation: TeamFormation = {
@@ -222,6 +222,44 @@ const away_4_1_3_2_Formation: TeamFormation = {
   SUB4: POSITION.Substitute.away.SUB4,
 }
 
+const home_3_3_1_3_Formation: TeamFormation = {
+  ALG: POSITION.ALG.home,
+  AT: POSITION.AT.home,
+  ALD: POSITION.ALD.home,
+  MOC: POSITION.MOC.home,
+  MDG: POSITION.MDG.home,
+  MDD: POSITION.MDD.home,
+  MD: POSITION.MD.home,
+  DCG3: POSITION.DCG3.home,
+  DC3: POSITION.DC3.home,
+  DCD3: POSITION.DCD3.home,
+  G: POSITION.G.home,
+  SUB0: POSITION.Substitute.home.SUB0,
+  SUB1: POSITION.Substitute.home.SUB1,
+  SUB2: POSITION.Substitute.home.SUB2,
+  SUB3: POSITION.Substitute.home.SUB3,
+  SUB4: POSITION.Substitute.home.SUB4,
+}
+
+const away_3_3_1_3_Formation: TeamFormation = {
+  ATG: POSITION.ATG.away,
+  ATD: POSITION.ATD.away,
+  MOC: POSITION.MOC.away,
+  MLG: POSITION.MLG.away,
+  MLD: POSITION.MLD.away,
+  MD: POSITION.MD.away,
+  DG: POSITION.DG.away,
+  DCG: POSITION.DCG.away,
+  DCD: POSITION.DCD.away,
+  DD: POSITION.DD.away,
+  G: POSITION.G.away,
+  SUB0: POSITION.Substitute.away.SUB0,
+  SUB1: POSITION.Substitute.away.SUB1,
+  SUB2: POSITION.Substitute.away.SUB2,
+  SUB3: POSITION.Substitute.away.SUB3,
+  SUB4: POSITION.Substitute.away.SUB4,
+}
+
 export const formations = {
   home: {
     "4-3-3": home_4_3_3_Formation,
@@ -230,6 +268,7 @@ export const formations = {
     "4-1-2-3": home_4_1_2_3_Formation,
     "4-1-2-1-2": home_4_1_2_1_2_Formation,
     "4-1-3-2": home_4_1_3_2_Formation,
+    "3-3-1-3": home_3_3_1_3_Formation,
   },
   away: {
     "4-3-3": away_4_3_3_Formation,
@@ -238,5 +277,6 @@ export const formations = {
     "4-1-2-3": away_4_1_2_3_Formation,
     "4-1-2-1-2": away_4_1_2_1_2_Formation,
     "4-1-3-2": away_4_1_3_2_Formation,
+    "3-3-1-3": away_3_3_1_3_Formation,
   },
 }

@@ -10,9 +10,14 @@ export default async function MatchPage({
   const { id } = await params
 
   if (!id) return <p>Match introuvable</p>
-  const match = MATCHES.find((match) => match.id === parseInt(id))
+  const match = MATCHES.find((match) => match.id === id)
 
-  if (!match) return <p>Match introuvable</p>
+  if (!match)
+    return (
+      <p className='flex h-40 justify-center items-center text-red-500 text-center text-xl font-medium'>
+        Match introuvable
+      </p>
+    )
 
   return (
     <section className='p-2 bg-slate-50 flex-1 max-w-7xl mx-auto'>
@@ -22,7 +27,7 @@ export default async function MatchPage({
             {match.competition}
             <br />
             <span className='text-sm'>
-              {match.date} - {match.season}
+              {match.date} -{match.season}
             </span>
           </p>
           <h1 className='text-lg md:text-xl font-bold flex justify-center w-full items-center'>

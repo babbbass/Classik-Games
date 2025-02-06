@@ -12,6 +12,10 @@ export const POSITION = {
     home: { x: 1185, y: 800, position: "AT" },
     away: { x: 1375, y: 800, position: "AT" },
   },
+  ALG: {
+    home: { x: 1150, y: 350, position: "ALG" },
+    away: { x: 1425, y: 1250, position: "ALG" },
+  },
   ALD: {
     home: { x: 1150, y: 1250, position: "ALD" },
     away: { x: 1425, y: 350, position: "ALD" },
@@ -63,10 +67,7 @@ export const POSITION = {
     home: { x: 700, y: 800, position: "MD" },
     away: { x: 1860, y: 800, position: "MD" },
   },
-  ALG: {
-    home: { x: 1150, y: 350, position: "ALG" },
-    away: { x: 1425, y: 1250, position: "ALG" },
-  },
+  //defender
   DG: {
     home: { x: 600, y: 250, position: "DG" },
     away: { x: 2000, y: 1350, position: "DG" },
@@ -83,6 +84,19 @@ export const POSITION = {
     home: { x: 600, y: 1350, position: "DD" },
     away: { x: 2000, y: 250, position: "DD" },
   },
+  DCG3: {
+    home: { x: 500, y: 550, position: "DCG3" },
+    away: { x: 2000, y: 250, position: "DD" },
+  },
+  DC3: {
+    home: { x: 450, y: 800, position: "DD" },
+    away: { x: 2000, y: 250, position: "DD" },
+  },
+  DCD3: {
+    home: { x: 500, y: 1050, position: "DD" },
+    away: { x: 2000, y: 250, position: "DD" },
+  },
+
   G: {
     home: { x: 105, y: 800, position: "G" },
     away: { x: 2460, y: 800, position: "G" },
