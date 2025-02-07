@@ -3,8 +3,8 @@ import { Roboto } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 import { Header } from "@/components/Header"
-import { Analytics } from "@vercel/analytics/react"
 import { Footer } from "@/components/Footer"
+import { Analytics } from "@/components/Analytics"
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -24,7 +24,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang='fr'>
+      <head>
+        <Analytics />
+      </head>
       <body
         className={`${roboto.variable} antialiased flex min-h-screen bg-gray-200 p-2 flex-col`}
       >
@@ -34,7 +37,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <Toaster />
-        <Analytics />
       </body>
     </html>
   )
